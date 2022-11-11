@@ -1,4 +1,31 @@
 fun main() {
+    println("Bytebank")
+    val contaRenan = Conta()
+    contaRenan.titular = "Renan"
+    contaRenan.numero = 100
+    contaRenan.saldo = 600.0
+
+    val contaKarina = Conta()
+    contaKarina.titular = "Karina"
+    contaKarina.numero = 101
+    contaKarina.saldo = 350.0
+
+    println(contaKarina.titular)
+    println(contaKarina.numero)
+    println(contaKarina.saldo)
+
+    println(contaRenan.titular)
+    println(contaRenan.numero)
+    println(contaRenan.saldo)
+}
+
+class Conta {
+    var titular = ""
+    var numero = 0
+    var saldo = 0.0
+}
+
+private fun testaLaco() {
     for (i in 5 downTo 1 step 4) {
         val titular: String = "Renan $i"
         val numeroConta: Int = 1000 + i
@@ -13,7 +40,6 @@ fun main() {
         //testaCondicoes(saldo)
 
     }
-
 }
 fun testaCondicoes(saldo: Double) {
     if (saldo > 0.0) {
