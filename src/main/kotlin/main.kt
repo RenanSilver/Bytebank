@@ -3,48 +3,27 @@ fun main() {
     val contaRenan = Conta()
     contaRenan.titular = "Renan"
     contaRenan.numero = 100
-    contaRenan.saldo = 600.0
+    contaRenan.setSaldo(600.0)
 
     val contaKarina = Conta()
     contaKarina.titular = "Karina"
     contaKarina.numero = 101
-    contaKarina.saldo = 350.0
+    contaKarina.setSaldo(500.0)
 
     println(contaKarina.titular)
     println(contaKarina.numero)
-    println(contaKarina.saldo)
+    println(contaKarina.getSaldo())
 
     println(contaRenan.titular)
     println(contaRenan.numero)
-    println(contaRenan.saldo)
+    println(contaRenan.getSaldo())
 
-    println("depositando na conta do Renan")
-    contaRenan.deposita(50.0)
-    println(contaRenan.saldo)
-
-    println("depositando na conta da Ka")
-    contaKarina.deposita(70.0)
-    println(contaKarina.saldo)
-
-    println("saque Renan")
-    contaRenan.saca(650.0)
-    println(contaRenan.saldo)
-
-    println("saque Karina")
-    contaKarina.saca(28.9)
-    println(contaKarina.saldo)
-
-    contaKarina.transfere(50.0, contaRenan)
-
-    println(contaKarina.saldo)
-    println(contaRenan.saldo)
 }
-
 
 class Conta {
     var titular = ""
     var numero = 0
-    var saldo = 0.0
+    private var saldo = 0.0
 
     fun deposita(valor: Double) {
         saldo += valor
@@ -63,11 +42,24 @@ class Conta {
     fun transfere(valor: Double, destino: Conta): Boolean {
         if (saldo >= valor) {
             saldo -= valor
-            destino.saldo += valor
+            destino.deposita(valor)
             println("Transferencia realizada com sucesso")
             return true
         }
         return false
+    }
+
+    fun getSaldo (): Double{
+        return saldo
+    }
+
+    fun setSaldo(valor: Double){
+        if(valor > 0) {
+            saldo = valor
+            return
+        }
+        println("Valor negativo")
+        return
     }
 }
 
@@ -115,6 +107,8 @@ fun testaCondicoes(saldo: Double) {
     }
 
 }
+
+
 
 //Da pra usar o when no lugar do if
 //when {
