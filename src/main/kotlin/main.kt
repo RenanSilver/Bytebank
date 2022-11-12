@@ -18,6 +18,8 @@ fun main() {
 //    println(contaRenan.numero)
 //    println(contaRenan.saldo)
 
+
+    //Entendendo referencias de objetos em kotlin
     val numeroX = 10
     var numeroY = numeroX
     numeroY++
@@ -28,7 +30,7 @@ fun main() {
     contaJoao.titular = "Joao"
     var contaMaria = contaJoao
     contaMaria.titular = "Maria"
-    contaJoao.titular = "KLEBASSO"
+
 
 
     println("titular conta Joao: ${contaJoao.titular}")
