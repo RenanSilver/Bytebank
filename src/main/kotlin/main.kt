@@ -19,21 +19,56 @@ fun main() {
     println(contaRenan.saldo)
 
     println("depositando na conta do Renan")
-    deposita(contaRenan, 50.0)
+    contaRenan.deposita(50.0)
     println(contaRenan.saldo)
 
     println("depositando na conta da Ka")
-    deposita(contaKarina, 70.0)
+    contaKarina.deposita(70.0)
     println(contaKarina.saldo)
+
+    println("saque Renan")
+    contaRenan.saca(650.0)
+    println(contaRenan.saldo)
+
+    println("saque Karina")
+    contaKarina.saca(28.9)
+    println(contaKarina.saldo)
+
+    contaKarina.transfere(50.0, contaRenan)
+
+    println(contaKarina.saldo)
+    println(contaRenan.saldo)
 }
 
-fun deposita(conta: Conta, valor: Double){
-    conta.saldo += valor
-}
+
 class Conta {
     var titular = ""
     var numero = 0
     var saldo = 0.0
+
+    fun deposita(valor: Double) {
+        saldo += valor
+    }
+
+    fun saca(valor: Double) {
+        if (this.saldo < valor) {
+            println("Saldo insulficiente")
+            return
+        }
+        saldo -= valor
+        println("Saque: $valor")
+
+    }
+
+    fun transfere(valor: Double, destino: Conta): Boolean {
+        if (saldo >= valor) {
+            saldo -= valor
+            destino.saldo += valor
+            println("Transferencia realizada com sucesso")
+            return true
+        }
+        return false
+    }
 }
 
 fun testaCoipiasEReferencias() {
