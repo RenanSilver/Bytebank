@@ -10,15 +10,33 @@ fun main() {
     contaKarina.numero = 101
     contaKarina.saldo = 350.0
 
-//    println(contaKarina.titular)
-//    println(contaKarina.numero)
-//    println(contaKarina.saldo)
+    println(contaKarina.titular)
+    println(contaKarina.numero)
+    println(contaKarina.saldo)
 
-//    println(contaRenan.titular)
-//    println(contaRenan.numero)
-//    println(contaRenan.saldo)
+    println(contaRenan.titular)
+    println(contaRenan.numero)
+    println(contaRenan.saldo)
 
+    println("depositando na conta do Renan")
+    deposita(contaRenan, 50.0)
+    println(contaRenan.saldo)
 
+    println("depositando na conta da Ka")
+    deposita(contaKarina, 70.0)
+    println(contaKarina.saldo)
+}
+
+fun deposita(conta: Conta, valor: Double){
+    conta.saldo += valor
+}
+class Conta {
+    var titular = ""
+    var numero = 0
+    var saldo = 0.0
+}
+
+fun testaCoipiasEReferencias() {
     //Entendendo referencias de objetos em kotlin
     val numeroX = 10
     var numeroY = numeroX
@@ -31,18 +49,8 @@ fun main() {
     var contaMaria = contaJoao
     contaMaria.titular = "Maria"
 
-
-
     println("titular conta Joao: ${contaJoao.titular}")
     println("titular conta Joao: ${contaMaria.titular}")
-
-
-}
-
-class Conta {
-    var titular = ""
-    var numero = 0
-    var saldo = 0.0
 }
 
 private fun testaLaco() {
@@ -61,6 +69,7 @@ private fun testaLaco() {
 
     }
 }
+
 fun testaCondicoes(saldo: Double) {
     if (saldo > 0.0) {
         println("Conta e positiva")
