@@ -3,30 +3,34 @@ fun main() {
     val contaRenan = Conta()
     contaRenan.titular = "Renan"
     contaRenan.numero = 100
-    contaRenan.setSaldo(600.0)
+    contaRenan.deposita(600.0)
 
     val contaKarina = Conta()
     contaKarina.titular = "Karina"
     contaKarina.numero = 101
-    contaKarina.setSaldo(500.0)
+    contaKarina.deposita(500.0)
 
     println(contaKarina.titular)
     println(contaKarina.numero)
-    println(contaKarina.getSaldo())
+    println(contaKarina.saldo)
 
     println(contaRenan.titular)
     println(contaRenan.numero)
-    println(contaRenan.getSaldo())
+    println(contaRenan.saldo)
 
 }
 
 class Conta {
     var titular = ""
     var numero = 0
-    private var saldo = 0.0
+    var saldo = 0.0
+        private set
+
 
     fun deposita(valor: Double) {
-        saldo += valor
+        if (valor > 0) {
+            saldo += valor
+        }
     }
 
     fun saca(valor: Double) {
@@ -49,18 +53,6 @@ class Conta {
         return false
     }
 
-    fun getSaldo (): Double{
-        return saldo
-    }
-
-    fun setSaldo(valor: Double){
-        if(valor > 0) {
-            saldo = valor
-            return
-        }
-        println("Valor negativo")
-        return
-    }
 }
 
 fun testaCoipiasEReferencias() {
@@ -107,7 +99,6 @@ fun testaCondicoes(saldo: Double) {
     }
 
 }
-
 
 
 //Da pra usar o when no lugar do if
