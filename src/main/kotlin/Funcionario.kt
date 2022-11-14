@@ -3,5 +3,4 @@ class Funcionario(
     val cpf: String,
     val salario: Double
 ) {
-
 }
