@@ -12,6 +12,14 @@ fun main() {
         salario = 2800.0,
         senha = 12345
     )
+    val franciscaoDiretor = Diretor(
+        nome = "Francisco",
+        cpf = "785.968.325-96",
+        salario = 4000000.0,
+        senha = 987654,
+        plr = 33.98
+    )
+
 
 
     println("nome: ${renanFuncionario.nome}")
@@ -24,6 +32,14 @@ fun main() {
     println("cpf: ${karinaGerente.cpf}")
     println("salario: ${karinaGerente.salario}")
     println("bonificacao: ${karinaGerente.bonificacao()}")
+    println("-----------------------------------------------")
+
+    println("nome: ${franciscaoDiretor.nome}")
+    println("cpf: ${franciscaoDiretor.cpf}")
+    println("salario: ${franciscaoDiretor.salario}")
+    println("bonificacao: ${franciscaoDiretor.bonificacao()}")
+    println("participacao nos lucros: ${franciscaoDiretor.plr}")
+
 
 
 
