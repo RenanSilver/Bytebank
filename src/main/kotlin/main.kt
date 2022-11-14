@@ -3,7 +3,8 @@ fun main() {
     val contaRenan = Conta("Renan", 1000)
     contaRenan.deposita(600.0)
 
-    val contaKarina = Conta("Karina", 500)
+    //labels. Se existe algum parametro com com valor definido consigomos alteralo dessa maneira.
+    val contaKarina = Conta(titular = "Karina", numero = 500)
     contaKarina.deposita(500.0)
 
     println(contaKarina.titular)
@@ -16,7 +17,10 @@ fun main() {
 
 }
 
-class Conta(var titular: String, var numero: Int) {
+class Conta(
+    var titular: String,
+    val numero: Int
+    ){
     var saldo = 0.0
         private set
 
