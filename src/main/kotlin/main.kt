@@ -64,7 +64,7 @@ fun testaCoipiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaJoao = Conta()
+    val contaJoao = Conta("Joao", 456)
     contaJoao.titular = "Joao"
     var contaMaria = contaJoao
     contaMaria.titular = "Maria"
