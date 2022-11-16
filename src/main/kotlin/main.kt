@@ -17,7 +17,7 @@ fun main() {
         cpf = "785.968.325-96",
         salario = 4000000.0,
         senha = 987654,
-        plr = 33.98
+        plr = 50000.0
     )
 
 
@@ -25,19 +25,19 @@ fun main() {
     println("nome: ${renanFuncionario.nome}")
     println("cpf: ${renanFuncionario.cpf}")
     println("salario: ${renanFuncionario.salario}")
-    println("bonificacao: ${renanFuncionario.bonificacao()}")
+    println("bonificacao: ${renanFuncionario.bonificacao}")
     println("-----------------------------------------------")
 
     println("nome: ${karinaGerente.nome}")
     println("cpf: ${karinaGerente.cpf}")
     println("salario: ${karinaGerente.salario}")
-    println("bonificacao: ${karinaGerente.bonificacao()}")
+    println("bonificacao: ${karinaGerente.bonificacao}")
     println("-----------------------------------------------")
 
     println("nome: ${franciscaoDiretor.nome}")
     println("cpf: ${franciscaoDiretor.cpf}")
     println("salario: ${franciscaoDiretor.salario}")
-    println("bonificacao: ${franciscaoDiretor.bonificacao()}")
+    println("bonificacao: ${franciscaoDiretor.bonificacao}")
     println("participacao nos lucros: ${franciscaoDiretor.plr}")
 
 
