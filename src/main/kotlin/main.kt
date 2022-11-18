@@ -40,7 +40,12 @@ fun main() {
     println("bonificacao: ${franciscaoDiretor.bonificacao}")
     println("participacao nos lucros: ${franciscaoDiretor.plr}")
 
+    val calculadora = CalculadoraBonificacao()
+    calculadora.registra(karinaGerente)
+    calculadora.registra(renanFuncionario)
+    calculadora.registra(franciscaoDiretor)
 
+    println("Total das bonificacoes: ${calculadora.total}")
 
 
     if(karinaGerente.autentica(22222)){
