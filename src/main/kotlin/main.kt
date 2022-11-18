@@ -20,6 +20,12 @@ fun main() {
         plr = 50000.0
     )
 
+    val maria = Analista(
+        nome = "Maria",
+        cpf = "555.999.666.88",
+        salario = 5000.0
+    )
+
 
 
     println("nome: ${renanFuncionario.nome}")
@@ -39,16 +45,24 @@ fun main() {
     println("salario: ${franciscaoDiretor.salario}")
     println("bonificacao: ${franciscaoDiretor.bonificacao}")
     println("participacao nos lucros: ${franciscaoDiretor.plr}")
+    println("---------------*-*-*-**-----------*-*-*--*---------*-*-*-*-")
+
+    println("nome: ${maria.nome}")
+    println("cpf: ${maria.cpf}")
+    println("salario: ${maria.salario}")
+    println("bonificacao: ${maria.bonificacao}")
+    println("-----------------------------------------------")
 
     val calculadora = CalculadoraBonificacao()
     calculadora.registra(karinaGerente)
     calculadora.registra(renanFuncionario)
     calculadora.registra(franciscaoDiretor)
+    calculadora.registra(maria)
 
     println("Total das bonificacoes: ${calculadora.total}")
 
 
-    if(karinaGerente.autentica(22222)){
+    if (karinaGerente.autentica(22222)) {
         println("Sucesso")
     } else {
         println("Senha incorreta")
