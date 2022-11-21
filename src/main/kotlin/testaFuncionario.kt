@@ -1,17 +1,26 @@
 class testaFuncionario {
     fun testaFuncionario() {
-        val renanFuncionario = Funcionario(
-            nome = "Renan", cpf = "42632896843", salario = 1890.0
+        val renanFuncionario = Analista(
+            nome = "Renan",
+            cpf = "42632896843",
+            salario = 1890.0
         )
         val karinaGerente = Gerente(
-            nome = "Karina", cpf = "605.987.362.98", salario = 2800.0, senha = 12345
+            nome = "Karina",
+            cpf = "605.987.362.98",
+            salario = 2800.0, senha = 12345
         )
         val franciscaoDiretor = Diretor(
-            nome = "Francisco", cpf = "785.968.325-96", salario = 4000000.0, senha = 987654, plr = 50000.0
+            nome = "Francisco",
+            cpf = "785.968.325-96",
+            salario = 4000000.0,
+            senha = 987654, plr = 50000.0
         )
 
         val maria = Analista(
-            nome = "Maria", cpf = "555.999.666.88", salario = 5000.0
+            nome = "Maria",
+            cpf = "555.999.666.88",
+            salario = 5000.0
         )
 
 
