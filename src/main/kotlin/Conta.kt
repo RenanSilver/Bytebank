@@ -3,8 +3,7 @@ abstract class Conta(
     val numero: Int
 ) {
     var saldo = 0.0
-        private set
-
+        protected set
 
     fun deposita(valor: Double) {
         if (valor > 0) {
@@ -12,15 +11,8 @@ abstract class Conta(
         }
     }
 
-    open fun saca(valor: Double) {
-        if (this.saldo < valor) {
-            println("Saldo insulficiente")
-            return
-        }
-        saldo -= valor
-        println("Saque: $valor")
+    abstract fun saca(valor: Double)
 
-    }
 
     fun transfere(valor: Double, destino: Conta): Boolean {
         if (saldo >= valor) {
