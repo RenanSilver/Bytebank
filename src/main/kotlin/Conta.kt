@@ -1,4 +1,4 @@
-open class Conta(
+abstract class Conta(
     var titular: String,
     val numero: Int
 ) {
