@@ -6,7 +6,7 @@ fun main(){
         var saldo = i + 10.0
 
         println("Titular: $titular")
-        println("Conta: $conta")
+        println("modelo.Conta: $conta")
         println("Saldo: $saldo")
         println("-----------")
         i++

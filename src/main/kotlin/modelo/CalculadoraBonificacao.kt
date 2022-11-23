@@ -1,3 +1,7 @@
+package modelo
+
+import modelo.Funcionario
+
 class CalculadoraBonificacao {
 
     var total: Double = 0.0
@@ -8,13 +12,13 @@ class CalculadoraBonificacao {
         this.total += funcionario.bonificacao
     }
 
-//Ultilizamos o Polimorfismo com o tipo mais Generico -Funcionario- dado que o metodo bonificacao() é para todos
+//Ultilizamos o Polimorfismo com o tipo mais Generico -modelo.Funcionario- dado que o metodo bonificacao() é para todos
 
-//    fun registra(funcionario: Gerente) {
+//    fun registra(funcionario: modelo.Gerente) {
 //        this.total += funcionario.bonificacao
 //    }
 //
-//    fun registra(funcionario: Diretor) {
+//    fun registra(funcionario: modelo.Diretor) {
 //        this.total += funcionario.bonificacao
 //    }
 }

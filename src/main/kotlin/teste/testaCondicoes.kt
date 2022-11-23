@@ -1,6 +1,6 @@
 fun testaCondicoes(saldo: Double) {
     if (saldo > 0.0) {
-        println("Conta e positiva")
+        println("modelo.Conta e positiva")
     } else if (saldo == 0.0) {
         println("conta neutra")
     } else {
@@ -8,8 +8,8 @@ fun testaCondicoes(saldo: Double) {
     }
 //Da pra usar o when no lugar do if
     when {
-        saldo > 0.0 -> println("Conta Positiva")
-        saldo == 0.0 -> println("Conta Zerada")
-        else -> println("Conta Negativa")
+        saldo > 0.0 -> println("modelo.Conta Positiva")
+        saldo == 0.0 -> println("modelo.Conta Zerada")
+        else -> println("modelo.Conta Negativa")
     }
 }

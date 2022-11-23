@@ -1,3 +1,5 @@
+import modelo.ContaCorrente
+
 fun testaCoipiasEReferencias() {
     //Entendendo referencias de objetos em kotlin
     val numeroX = 10
