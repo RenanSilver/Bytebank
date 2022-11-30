@@ -9,7 +9,7 @@ fun testaFuncionarios() {
     val karinaGerente = Gerente(
         nome = "Karina",
         cpf = "605.987.362.98",
-        salario = 2800.0, senha = 12345
+        salario = 2800.0, senha = 22
     )
     val franciscaoDiretor = Diretor(
         nome = "Francisco",
@@ -73,9 +73,4 @@ fun testaFuncionarios() {
     println("Total das bonificacoes: ${calculadora.total}")
 
 
-    if (karinaGerente.autentica(22222)) {
-        println("Sucesso")
-    } else {
-        println("Senha incorreta")
-    }
 }
