@@ -1,9 +1,9 @@
 package pacoteTestaApelidos
-import modelo.Cliente as ClienteApelido
+import br.com.alura.bytebank.modelo.Cliente as ClienteApelido
 
 fun main() {
 
-    val cliente = ClienteApelido(nome = "Teste", cpf = "teste", senha = 123)
+    val cliente = ClienteApelido(nome = "Teste", cpf = "br/com/alura/bytebank/teste", senha = 123)
     val clienteApelido = Cliente()
 
 //Entao foi criado um pacote com uma classe com o mesmo nome de outra classe, para instanciar as duas e colocar um

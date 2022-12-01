@@ -1,4 +1,4 @@
-import modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.ContaCorrente
 
 fun testaCoipiasEReferencias() {
     //Entendendo referencias de objetos em kotlin
