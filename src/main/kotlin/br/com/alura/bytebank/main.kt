@@ -1,5 +1,6 @@
 import br.com.alura.bytebank.modelo.*
 
+var totalContas = 0
 fun main() {
     println("Bytebank")
 
@@ -9,8 +10,8 @@ fun main() {
 
     testaContasDiferentes()
 
-    println("total de contas: ${contaTeste.total}")
-    //O resultado será sempre 1, pois o somador esta interligado apenas com a instancia.
+    println("total de contas: ${totalContas}")
+    //Aqui o total de contas criadas foi adicionado como planejado, usando uma bvariavel global.
 
 }
 
