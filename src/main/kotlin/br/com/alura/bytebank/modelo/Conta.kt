@@ -1,6 +1,7 @@
 package br.com.alura.bytebank.modelo
 
-import totalContas
+var totalContas = 0
+    private set
 
 abstract class Conta(
     var titular: Cliente,

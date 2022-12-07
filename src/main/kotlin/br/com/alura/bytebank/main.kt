@@ -1,6 +1,4 @@
 import br.com.alura.bytebank.modelo.*
-
-var totalContas = 0
 fun main() {
     println("Bytebank")
 
@@ -11,7 +9,8 @@ fun main() {
     testaContasDiferentes()
 
     println("total de contas: ${totalContas}")
-    //Aqui o total de contas criadas foi adicionado como planejado, usando uma bvariavel global.
+    //Nessa situacação foi transferida a variavel global para a classe conta, E foi privado o set dela.
+    //Então ela fica restrica apenas a classe conta, trazendo mais segurança para o atributo.
 
 }
 
