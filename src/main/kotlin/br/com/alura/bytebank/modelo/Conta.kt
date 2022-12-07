@@ -6,6 +6,12 @@ abstract class Conta(
 ) {
     var saldo = 0.0
         protected set
+    var total = 0
+
+    init {
+        println("Adicionou conta")
+        total++
+    }
 
     fun deposita(valor: Double) {
         if (valor > 0) {
