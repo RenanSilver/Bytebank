@@ -71,6 +71,4 @@ fun testaFuncionarios() {
     calculadora.registra(edil)
 
     println("Total das bonificacoes: ${calculadora.total}")
-
-
 }
